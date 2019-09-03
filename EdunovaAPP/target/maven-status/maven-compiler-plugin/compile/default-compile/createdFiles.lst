@@ -1,0 +1,12 @@
+edunova\model\Smjer.class
+edunova\Start.class
+edunova\model\Osoba.class
+edunova\model\Predavac.class
+edunova\model\Polaznik.class
+edunova\model\Entitet.class
+edunova\controller\Obrada.class
+edunova\utility\HibernateUtil.class
+.netbeans_automatic_build
+edunova\test\TestSmjer.class
+edunova\controller\ObradaSmjer.class
+edunova\model\Grupa.class

@@ -184,8 +184,10 @@ public class Izbornik extends javax.swing.JFrame {
         System.out.println(Arrays.deepToString(niz));
         for(Integer suma : niz){
            if(niz.length%2==0){
-               Integer [] suma1 = new Integer[niz.length/2];
-                
+               Integer [] suma1p = new Integer[niz.length/2];
+               if(suma1p.length %2==0){
+                   Integer[] suma2p = 
+               } 
            }
         /* if(niz.length%2==0){
              
