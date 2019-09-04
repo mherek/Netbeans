@@ -6,6 +6,9 @@
 package konstrukto.controller;
 
 import konstrukto.utility.DAO;
+import konstrukto.utility.HibernateUtil;
+import konstrukto.utility.MyException;
+import org.hibernate.Session;
 
 /**
  *
@@ -14,14 +17,37 @@ import konstrukto.utility.DAO;
 public abstract class Obrada<T> {
     
    
+   protected abstract void spremi() throws MyException;
+   protected abstract void brisi() throws MyException;
+   protected abstract void citaj() throws MyException;
+   
+   protected Session session;
+   
+   public Obrada(){
+       this.session=HibernateUtil.getSession();
+       
+   }
+        
+   
+     public T spremi(T entitet) throws MyException{
+     spremi();
+        session.beginTransaction();
+        session.save(entitet);
+        session.getTransaction().commit();
+        
+        return entitet;
+     }
     
-    protected DAO<T> dao;
-
-    public Obrada() {
-        dao = new DAO<>();
-    }
-    
-    
-    
-    
+     public void brisi (T entitet) throws MyException{
+         brisi();
+         session.beginTransaction();
+         session.delete(entitet);
+         session.getTransaction().commit();     }
+     
+     public void citaj (T entitet ) throws MyException{
+         session.beginTransaction();
+         session.get(entitet, );
+         
+     }
 }
+

@@ -5,11 +5,15 @@
  */
 package konstrukto.model;
 
+import java.io.Serializable;
+import javax.persistence.Entity;
+
 /**
  *
  * @author Isus
  */
-public abstract class Radnik extends Entitet {
+@Entity
+public /*abstract*/ class Radnik extends Entitet implements Serializable{
     
     private String ime;
     private String  prezime;

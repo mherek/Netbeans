@@ -41,6 +41,6 @@ public abstract class Obrada<T> {
         session.getTransaction().commit();
     }
     
-    
+   
     
 }

@@ -5,13 +5,16 @@
  */
 package konstrukto.model;
 
+import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Entity;
 
 /**
  *
  * @author Isus
  */
-public class Dogadaj extends Entitet {
+ @Entity
+public class Dogadaj extends Entitet implements Serializable{
 
     private Date vrijemepocetka;
     private Date vrijemekraja;

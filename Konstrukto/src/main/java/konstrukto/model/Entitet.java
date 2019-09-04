@@ -5,11 +5,20 @@
  */
 package konstrukto.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+
 /**
  *
  * @author Isus
  */
- public abstract class Entitet {
+@MappedSuperclass
+public abstract class Entitet {
+    @Id
+    @GeneratedValue
+    private Integer id;
 
     public Integer getId() {
         return id;
@@ -18,18 +27,13 @@ package konstrukto.model;
     public void setId(Integer id) {
         this.id = id;
     }
-    
-   
-        private Integer id;
-        
-        public Entitet(){
-            
-        }
 
-        public Entitet(Integer id) {
-            this.id = id;
-        }
-        
+    public Entitet() {
+
     }
-    
 
+    public Entitet(Integer id) {
+        this.id = id;
+    }
+
+}

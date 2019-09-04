@@ -5,11 +5,15 @@
  */
 package konstrukto.model;
 
+import java.io.Serializable;
+import javax.persistence.Entity;
+
 /**
  *
  * @author Isus
  */
-public class Gradiliste extends Entitet {
+@Entity
+public class Gradiliste extends Entitet implements Serializable {
 
     private String ime;
     private String adresa;
