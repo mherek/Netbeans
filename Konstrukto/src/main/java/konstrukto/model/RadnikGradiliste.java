@@ -8,6 +8,7 @@ package konstrukto.model;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import javax.persistence.ManyToMany;
 
 
 /**
@@ -21,7 +22,9 @@ public class RadnikGradiliste extends Entitet implements Serializable{
 
     private Date vrijemepocetka;
     private Date vrijemekraja;
+    @ManyToMany
     private List<Radnik> radnici;
+    @ManyToMany
     private Gradiliste gradiliste;
 
     public RadnikGradiliste(Date vrijemepocetka, Date vrijemekraja, List<Radnik> radnici, Gradiliste gradiliste, Integer id) {

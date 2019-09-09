@@ -7,14 +7,17 @@ package konstrukto.model;
 
 import java.io.Serializable;
 import java.util.List;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 /**
  *
  * @author Isus
  */
 public abstract class StrojGradiliste extends Entitet implements Serializable {
-
+    @ManyToMany
     private List<Stroj> strojevi;
+    @OneToMany
     private Gradiliste gradiliste;
 
     public StrojGradiliste(List<Stroj> strojevi, Gradiliste gradiliste, Integer id) {
