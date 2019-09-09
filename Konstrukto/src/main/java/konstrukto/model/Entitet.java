@@ -16,6 +16,7 @@ import javax.persistence.MappedSuperclass;
  */
 @MappedSuperclass
 public abstract class Entitet {
+
     @Id
     @GeneratedValue
     private Integer id;

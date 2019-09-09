@@ -44,10 +44,4 @@ public abstract class Obrada<T> {
          session.delete(entitet);
          session.getTransaction().commit();     }
      
-     public void citaj (T entitet ) throws MyException{
-         session.beginTransaction();
-         session.get(entitet, );
-         
-     }
 }
-

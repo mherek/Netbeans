@@ -39,12 +39,9 @@ public class Gradiliste extends Entitet implements Serializable {
     public void setAdresa(String adresa) {
         this.adresa = adresa;
     }
-    
-    
-    
+
     public Gradiliste() {
+        super();
     }
 
-
-    
 }

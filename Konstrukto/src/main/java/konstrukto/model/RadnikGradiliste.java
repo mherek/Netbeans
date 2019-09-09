@@ -7,24 +7,35 @@ package konstrukto.model;
 
 import java.io.Serializable;
 import java.util.Date;
-import javax.persistence.Entity;
+import java.util.List;
+
 
 /**
  *
  * @author Isus
  */
- @Entity
-public class Dogadaj extends Entitet implements Serializable{
+
+// Tablica za provjeru koji dan je koji radnik bio na kojem gradilistu 
+ 
+public class RadnikGradiliste extends Entitet implements Serializable{
 
     private Date vrijemepocetka;
     private Date vrijemekraja;
+    private List<Radnik> radnici;
+    private Gradiliste gradiliste;
 
-    public Dogadaj(Date vrijemepocetka, Date vrijemekraja, Integer id, Integer gradiliste) {
+    public RadnikGradiliste(Date vrijemepocetka, Date vrijemekraja, List<Radnik> radnici, Gradiliste gradiliste, Integer id) {
         super(id);
         this.vrijemepocetka = vrijemepocetka;
         this.vrijemekraja = vrijemekraja;
-        
+        this.radnici = radnici;
+        this.gradiliste = gradiliste;
     }
+
+    
+    
+    
+    
     
     
     
@@ -46,7 +57,8 @@ public class Dogadaj extends Entitet implements Serializable{
     }
     
     
-    public Dogadaj() {
+    public RadnikGradiliste() {
+        super();
     }
 
 

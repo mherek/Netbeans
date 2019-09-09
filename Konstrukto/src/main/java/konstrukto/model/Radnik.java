@@ -13,19 +13,20 @@ import javax.persistence.Entity;
  * @author Isus
  */
 @Entity
-public /*abstract*/ class Radnik extends Entitet implements Serializable{
-    
+public abstract class Radnik extends Entitet implements Serializable {
+
     private String ime;
-    private String  prezime;
+    private String prezime;
     private String iban;
     private String oib;
     private Integer nadredeni;
     private String napomena;
 
     public Radnik() {
+        super();
     }
 
-    public Radnik(String ime, String prezime, String iban, String oib, Integer nadredeni, String napomena, Integer id) {
+    public Radnik(Integer id, String ime, String prezime, String iban, String oib, Integer nadredeni, String napomena) {
         super(id);
         this.ime = ime;
         this.prezime = prezime;
@@ -82,9 +83,5 @@ public /*abstract*/ class Radnik extends Entitet implements Serializable{
     public void setNapomena(String napomena) {
         this.napomena = napomena;
     }
-    
-    
-    
-    
-    
+
 }
