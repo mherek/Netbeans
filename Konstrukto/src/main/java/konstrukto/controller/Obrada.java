@@ -5,7 +5,7 @@
  */
 package konstrukto.controller;
 
-import konstrukto.utility.DAO;
+import java.util.List;
 import konstrukto.utility.HibernateUtil;
 import konstrukto.utility.MyException;
 import org.hibernate.Session;
@@ -15,33 +15,34 @@ import org.hibernate.Session;
  * @author Isus
  */
 public abstract class Obrada<T> {
-    
-   
-   protected abstract void spremi() throws MyException;
-   protected abstract void brisi() throws MyException;
-   protected abstract void citaj() throws MyException;
-   
-   protected Session session;
-   
-   public Obrada(){
-       this.session=HibernateUtil.getSession();
-       
-   }
-        
-   
-     public T spremi(T entitet) throws MyException{
-     spremi();
+
+    protected abstract void kontrolaSpremi(T entitet) throws MyException;
+
+    protected abstract void kontrolaBrisi(T entitet) throws MyException;
+
+    public abstract List<T> getEntiteti();
+
+    protected Session session;
+
+    public Obrada() {
+        this.session = HibernateUtil.getSession();
+
+    }
+
+    public T spremi(T entitet) throws MyException {
+        kontrolaSpremi(entitet);
         session.beginTransaction();
         session.save(entitet);
         session.getTransaction().commit();
-        
+
         return entitet;
-     }
-    
-     public void brisi (T entitet) throws MyException{
-         brisi();
-         session.beginTransaction();
-         session.delete(entitet);
-         session.getTransaction().commit();     }
-     
+    }
+
+    public void brisi(T entitet) throws MyException {
+        kontrolaBrisi(entitet);
+        session.beginTransaction();
+        session.delete(entitet);
+        session.getTransaction().commit();
+    }
+
 }

@@ -5,65 +5,10 @@
  */
 package konstrukto.model;
 
-import java.io.Serializable;
-import java.util.Date;
-import java.util.List;
-import javax.persistence.ManyToMany;
-
-
 /**
  *
  * @author Isus
  */
-
-// Tablica za provjeru koji dan je koji radnik bio na kojem gradilistu 
- 
-public class RadnikGradiliste extends Entitet implements Serializable{
-
-    private Date vrijemepocetka;
-    private Date vrijemekraja;
-    @ManyToMany
-    private List<Radnik> radnici;
-    @ManyToMany
-    private Gradiliste gradiliste;
-
-    public RadnikGradiliste(Date vrijemepocetka, Date vrijemekraja, List<Radnik> radnici, Gradiliste gradiliste, Integer id) {
-        super(id);
-        this.vrijemepocetka = vrijemepocetka;
-        this.vrijemekraja = vrijemekraja;
-        this.radnici = radnici;
-        this.gradiliste = gradiliste;
-    }
-
-    
-    
-    
-    
-    
-    
-    
-    
-    public Date getVrijemepocetka() {
-        return vrijemepocetka;
-    }
-
-    public void setVrijemepocetka(Date vrijemepocetka) {
-        this.vrijemepocetka = vrijemepocetka;
-    }
-
-    public Date getVrijemekraja() {
-        return vrijemekraja;
-    }
-
-    public void setVrijemekraja(Date vrijemekraja) {
-        this.vrijemekraja = vrijemekraja;
-    }
-    
-    
-    public RadnikGradiliste() {
-        super();
-    }
-
-
+public class RadnikGradiliste {
     
 }

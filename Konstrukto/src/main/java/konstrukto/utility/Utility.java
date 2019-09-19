@@ -9,11 +9,10 @@ package konstrukto.utility;
  *
  * @author Isus
  */
-public class DAO<T> {
-   
-    public T spremi (T entitet){
-        System.out.println("Spremio");
-        return entitet;
+public class Utility {
+    
+     public static boolean isDev(){
+        return true;
     }
     
 }

@@ -13,7 +13,7 @@ import javax.persistence.Entity;
  * @author Isus
  */
 @Entity
-public abstract class Stroj extends Entitet implements Serializable {
+public class Stroj extends Entitet implements Serializable {
 
     private String model;
     private String marka;

@@ -14,30 +14,29 @@ import konstrukto.utility.ObradaInterface;
  *
  * @author Isus
  */
-public abstract class ObradaRadnik extends Obrada<Radnik> implements ObradaInterface<Radnik> {
+public class ObradaRadnik extends ObradaOsoba<Radnik> {
+
+     @Override
+    public List<Radnik> getEntiteti() {
+        return session.createQuery("from radnik").list();
+    }
     
-    public ObradaRadnik(){
+    public ObradaRadnik() {
         super();
     }
 
-    @Override
-    public Radnik create(Radnik entitet) throws MyException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     // Metoda za vracanje iz baze
-    public List<Radnik> getRadnik() {
-     return session.createQuery("from radnik").list();
-    
+
+ @Override
+    protected void kontrolaSpremi(Radnik entitet) throws MyException {
+        super.kontrolaSpremi(entitet); 
+    }
+
+
+    @Override
+    protected void kontrolaBrisi(Radnik entitet) throws MyException{
+       kontrolaBrisi(entitet);
 }
-    // 2 nacin
-    /*
-    public T spremi(T entitet) throws MyException{
-     spremi();
-        session.beginTransaction();
-        session.save(entitet);
-        session.getTransaction().commit();
-        
-        return entitet;
-     }
-*/
+
+   
 }
