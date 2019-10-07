@@ -11,7 +11,7 @@ import konstrukto.utility.MyException;
 /**
  *
  * @author Isus
- * @param <T>
+ * @param <T> extends Osoba
  */
 public abstract class ObradaOsoba<T extends Osoba> extends Obrada<T> {
 

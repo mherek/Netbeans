@@ -3,15 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package konstrukto.utility;
+package Test;
+
+import konstrukto.model.Radnik;
 
 /**
  *
  * @author Isus
  */
-public interface ObradaInterface<T> {
-  
-  public T create ( T entitet) throws MyException;
-  
+public class TestRadnik {
+    
+    public static void test(){
+        Radnik r = new Radnik();
+        r.setIme("Mario");
+        r.setPrezime("Maric");
+    }
     
 }

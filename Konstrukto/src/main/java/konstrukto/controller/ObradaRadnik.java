@@ -8,7 +8,7 @@ package konstrukto.controller;
 import java.util.List;
 import konstrukto.model.Radnik;
 import konstrukto.utility.MyException;
-import konstrukto.utility.ObradaInterface;
+
 
 /**
  *

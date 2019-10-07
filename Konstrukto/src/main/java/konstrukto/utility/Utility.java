@@ -15,4 +15,9 @@ public class Utility {
         return true;
     }
     
+        public static String getNazivAplikacije(){
+        return "Konstrukto V1";
+    }
+        
+        
 }
