@@ -9,7 +9,7 @@
                 character set utf8 collate utf8_general_ci;
         -->
         <property name="connection.driver_class">org.mariadb.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mariadb://localhost/Konstrukto?useSSL=false</property>
+        <property name="connection.url">jdbc:mariadb://localhost/konstrukto?useSSL=false</property>
         <property name="connection.username">edunova</property>
         <property name="connection.password">edunova</property>
         <!-- JDBC connection pool settings ... using built-in test pool -->
@@ -23,13 +23,13 @@
         <property name="current_session_context_class">thread</property>
         <!-- Drop and re-create the database schema on startup -->
         <!-- 
-            validate: validate the schema, makes no changes to the database.
-            update: update the schema.
-            create: creates the schema, destroying previous data.
-            create-drop: drop the schema at the end of the session. 
-            1. puta create, poslije update
-            -->
-        <property name="hbm2ddl.auto">create-drop</property>
+        validate: validate the schema, makes no changes to the database.
+        update: update the schema.
+        create: creates the schema, destroying previous data.
+        create-drop: drop the schema at the end of the session. 
+        1. puta create, poslije update
+        -->
+        <property name="hbm2ddl.auto">create</property>
         <!-- dbcp connection pool configuration -->
         <property name="hibernate.dbcp.initialSize">5</property>
         <property name="hibernate.dbcp.maxTotal">20</property>
@@ -42,5 +42,8 @@
         <mapping class="konstrukto.model.Radnik" />
         <mapping class="konstrukto.model.Dogadaj" />
         <mapping class="konstrukto.model.Gradiliste" />
+         <mapping class="konstrukto.model.Stroj" />
+        <mapping class="konstrukto.model.Raspored" />
+        <mapping class="konstrukto.model.RadniNalog" />
     </session-factory>
 </hibernate-configuration>

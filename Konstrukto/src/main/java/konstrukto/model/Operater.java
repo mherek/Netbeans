@@ -14,12 +14,23 @@ import java.io.Serializable;
 public class Operater extends Osoba implements Serializable{
     
     private String sifra;
+    private String email;
 
-    public Operater(String sifra, String ime, String prezime, String oib, String iban, Integer id) {
+    public Operater(String sifra, String email, String ime, String prezime, String oib, String iban, Integer id) {
         super(ime, prezime, oib, iban, id);
         this.sifra = sifra;
+        this.email = email;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+ 
     public Operater() {
         super();
     }

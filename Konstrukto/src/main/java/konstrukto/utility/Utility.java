@@ -10,14 +10,17 @@ package konstrukto.utility;
  * @author Isus
  */
 public class Utility {
-    
-     public static boolean isDev(){
+
+    public static boolean isDev() {
         return true;
     }
-    
-        public static String getNazivAplikacije(){
+
+    public static String getNazivAplikacije() {
         return "Konstrukto V1";
     }
-        
-        
+
+    public static String getFormatDatumaIVremena(){
+          return "dd. MM. YYYY. HH:mm:ss";
+    }
+    
 }

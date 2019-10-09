@@ -5,40 +5,42 @@
  */
 package konstrukto.model;
 
+import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 
 /**
  *
  * @author Isus
  */
-public class RadnikGradiliste extends Entitet {
-    @OneToMany
-    private Radnik radnik;
+public class Raspored extends Entitet implements Serializable{
     @ManyToMany
+    private List<Radnik> radnici;
+    @ManyToOne
     private Gradiliste gradiliste;
     private Date vrijemepocetka;
     private Date vrijemekraja;
 
-    public RadnikGradiliste() {
+    public Raspored() {
         super();
     }
 
-    public RadnikGradiliste(Radnik radnik, Gradiliste gradiliste, Date vrijemepocetka, Date vrijemekraja, Integer id) {
+    public Raspored(List<Radnik> radnici, Gradiliste gradiliste, Date vrijemepocetka, Date vrijemekraja, Integer id) {
         super(id);
-        this.radnik = radnik;
+        this.radnici = radnici;
         this.gradiliste = gradiliste;
         this.vrijemepocetka = vrijemepocetka;
         this.vrijemekraja = vrijemekraja;
     }
 
-    public Radnik getRadnik() {
-        return radnik;
+    public List<Radnik> getRadnici() {
+        return radnici;
     }
 
-    public void setRadnik(Radnik radnik) {
-        this.radnik = radnik;
+    public void setRadnici(List<Radnik> radnici) {
+        this.radnici = radnici;
     }
 
     public Gradiliste getGradiliste() {
@@ -64,7 +66,7 @@ public class RadnikGradiliste extends Entitet {
     public void setVrijemekraja(Date vrijemekraja) {
         this.vrijemekraja = vrijemekraja;
     }
-    
+
     
     
     
