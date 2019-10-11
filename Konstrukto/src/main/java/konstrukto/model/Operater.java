@@ -6,11 +6,13 @@
 package konstrukto.model;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
 
 /**
  *
  * @author Isus
  */
+@Entity
 public class Operater extends Osoba implements Serializable{
     
     private String sifra;

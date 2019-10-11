@@ -6,6 +6,7 @@
 package konstrukto.main;
 
 import konstrukto.test.PocetniInsert;
+import konstrukto.view.Splash;
 
 /**
  *
@@ -14,7 +15,7 @@ import konstrukto.test.PocetniInsert;
 public class Start {
     
     public static void main(String[] args) {
-        PocetniInsert.pocetniinsert();
-        
+//        PocetniInsert.pocetniinsert();
+        new Splash().setVisible(true);
     }
 }

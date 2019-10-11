@@ -18,7 +18,7 @@ public class ObradaRadnik extends ObradaOsoba<Radnik> {
 
      @Override
     public List<Radnik> getEntiteti() {
-        return session.createQuery("from radnik").list();
+        return session.createQuery("from Radnik").list();
     }
     
     public ObradaRadnik() {

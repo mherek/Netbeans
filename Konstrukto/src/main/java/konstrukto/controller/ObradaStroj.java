@@ -5,10 +5,29 @@
  */
 package konstrukto.controller;
 
+import java.util.List;
+import konstrukto.model.Stroj;
+import konstrukto.utility.MyException;
+
 /**
  *
  * @author Isus
  */
-public class ObradaStroj {
+public class ObradaStroj extends Obrada<Stroj>{
+
+    @Override
+    protected void kontrolaSpremi(Stroj entitet) throws MyException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    protected void kontrolaBrisi(Stroj entitet) throws MyException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Stroj> getEntiteti() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

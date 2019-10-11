@@ -37,8 +37,8 @@ public class FormaGradiliste extends KonstruktoView<Gradiliste> {
         btnPromjeni = new javax.swing.JButton();
         btnBrisi = new javax.swing.JButton();
         btnDodaj = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane<>();
-        lstGradiliste = new javax.swing.JList<>();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -97,7 +97,7 @@ public class FormaGradiliste extends KonstruktoView<Gradiliste> {
                 .addContainerGap(70, Short.MAX_VALUE))
         );
 
-        jScrollPane1.setViewportView(lstGradiliste);
+        jScrollPane2.setViewportView(jList1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -105,7 +105,7 @@ public class FormaGradiliste extends KonstruktoView<Gradiliste> {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -115,8 +115,8 @@ public class FormaGradiliste extends KonstruktoView<Gradiliste> {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1))
+                    .addComponent(jScrollPane2)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(40, Short.MAX_VALUE))
         );
 
@@ -135,9 +135,9 @@ public class FormaGradiliste extends KonstruktoView<Gradiliste> {
     private javax.swing.JButton btnPromjeni;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane<Gradiliste> jScrollPane1;
-    private javax.swing.JList<Gradiliste> lstGradiliste;
+    private javax.swing.JList<Gradiliste> jList1;
+    javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField txtAdresa;
     private javax.swing.JTextField txtIme;
     // End of variables declaration//GEN-END:variables

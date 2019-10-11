@@ -30,7 +30,7 @@ public abstract class Entitet {
     }
 
     public Entitet() {
-
+        
     }
 
     public Entitet(Integer id) {

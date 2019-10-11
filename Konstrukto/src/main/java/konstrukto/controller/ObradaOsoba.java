@@ -20,8 +20,8 @@ public abstract class ObradaOsoba<T extends Osoba> extends Obrada<T> {
         //kontrola imena, prezimena, email, oib
         kontrolaIme(entitet.getIme());
         kontrolaPrezime(entitet.getPrezime());
-        kontrolaOIB(entitet.getOib());
-        kontrolaIban(entitet.getIban());
+        /*kontrolaOIB(entitet.getOib());
+        kontrolaIban(entitet.getIban());*/
     }
 
     protected void kontrolaIme(String ime) throws MyException {

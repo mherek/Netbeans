@@ -22,6 +22,8 @@ public class PocetniInsert {
         Radnik r = new Radnik();
         r.setIme("Marko");
         r.setPrezime("Herek");
+        r.setOib("47543772619");
+        r.setIban("NL85ABNA4683542374");
         ObradaRadnik obrada = new ObradaRadnik();
         try {
             r = obrada.spremi(r);
